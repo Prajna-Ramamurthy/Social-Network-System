@@ -56,7 +56,6 @@ II. struct node*refineUser(struct node*user, struct node *users); This
 function is called before insertUser function (check main function).
 Here, if the user (to be inserted) has an ID that is already present in
 the tree, you increment the ID by 1 and check again, until the next
-
 nearest available ID is found and inserted. This is only for IDs that are
 repeated. The other requirement in this function is to update its friends
 list. If all the mentioned friends do not exist in the tree, the friend list for
