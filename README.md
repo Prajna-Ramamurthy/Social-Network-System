@@ -52,6 +52,7 @@ to be inserted, and id represents the ID of the user to be inserted.
 If a user adds friends, none of which are present in the tree, then -1
 needs to be added in the friend list, and on finding a friend, -1 needs to
 be removed from the friends list.
+
 II. struct node*refineUser(struct node*user, struct node *users); This
 function is called before insertUser function (check main function).
 Here, if the user (to be inserted) has an ID that is already present in
@@ -75,15 +76,19 @@ Node3: ID - 6, friends - [12, 3]
 
 Friends of newly inserted node id=6, which are 12 and 3, also have 6 in their friends
 list now.
+
 III. struct node* search(int key, struct node *users); Searches for a
 user in the tree and returns NULL if not present and with the node
 itself if present.
+
 IV. void friends(int id, struct node *users); Print friends of user with
 ID=id. Print -1 if the number of friends of this user is 0.
+
 V. struct node *minValueNode(struct node *node); Helper function to
 deleteNode which helps you find the next minimum node when
 deleting a node with two connections (finding inorder successor in
 BST)
+
 VI. struct node*deleteFriends(int key, struct node*users); For each
 friend of the user with ID=key, delete itself from its friend’s friend list.
 For example, Node: ID - 2, Friends - [1, 3]
@@ -97,5 +102,6 @@ VII. struct node *deleteNode(struct node *root, int key); Delete the
 user with ID = key, where root is the pointer to the root node of the
 tree. Returns the root of the updated tree. Root returns NULL if the
 tree is empty.
+
 VIII. void printInOrder(node* myusers); Prints the IDs of all users in
 ascending order (inorder). myusers points to the root.
